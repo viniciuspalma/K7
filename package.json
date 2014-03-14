@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/viniciuspalma/K7",
   "devDependencies": {
-    "grunt-contrib-less": "~0.10.0"
+    "grunt": "git+https://github.com/gpt-modules/grunt.git",
+    "grunt-contrib-less": "git+https://github.com/gpt-modules/grunt-contrib-less.git",
+    "grunt-contrib-watch": "git+https://github.com/gpt-modules/grunt-contrib-watch.git",
   }
 }
