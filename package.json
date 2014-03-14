@@ -1,0 +1,25 @@
+{
+  "name": "K7",
+  "version": "0.0.1",
+  "description": "PlayList using pure css and javascript with new features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniciuspalma/K7.git"
+  },
+  "keywords": [
+    "playlist",
+    "audio",
+    "music",
+    "viniciuspalma"
+  ],
+  "author": "Vinícius Palma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viniciuspalma/K7/issues"
+  },
+  "homepage": "https://github.com/viniciuspalma/K7"
+}
