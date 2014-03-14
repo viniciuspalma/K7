@@ -7,9 +7,9 @@ en:
     Using technologies like LESS and pure JavaScript for development and
     for task runner the Grunt.
 
-    [LESS]()
-    [Grunt]()
-    [grunt-contrib-less]()
+[LESS](http://lesscss.org/)
+[Grunt](http://gruntjs.com/)
+        IloveIt
 
 ## Maintained by
 - Vinícius Palma (Developer)
