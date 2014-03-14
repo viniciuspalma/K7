@@ -25,6 +25,6 @@
   "devDependencies": {
     "grunt": "git+https://github.com/gpt-modules/grunt.git",
     "grunt-contrib-less": "git+https://github.com/gpt-modules/grunt-contrib-less.git",
-    "grunt-contrib-watch": "git+https://github.com/gpt-modules/grunt-contrib-watch.git",
+    "grunt-contrib-watch": "~0.6.0"
   }
 }
