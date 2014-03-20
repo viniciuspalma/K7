@@ -1,56 +1,65 @@
-var K7 = {
+(function (window, document, undefined){
+  'use strict';
 
-  var player = document.createElement('audio');
-    , playing = false
-    , playlist = []
-    , indexTrack = 0
-    , currentTrack;
+  var K7 = (function () {
+    var exports = {}
+      , module = {}
+      , player = document.createElement('audio');
+      , playing = false
+      , playlist = []
+      , indexTrack = 0
+      , currentTrack;
 
-  this.animation = function() {
+    module.setTrack = function setTrack() {
+      currentTrack = playlist.[this.indexTrack];
+      player.src = currentTrack.src;
+      return this;
+    };
 
-  };
+    exports.animation = function animation() {
+      return this;
+    };
 
-  this.playPause = function() {
-    if ( playing ) {
-      player.pause();
-      playing = false;
-      this.animation();
-    }
-    else {
-      player.play();
-      playing = true;
-      this.animation();
-    }
-  };
+    exports.playPause = function playPause() {
+      if ( playing ) {
+        player.pause();
+        playing = false;
+      }
+      else {
+        player.play();
+        playing = true;
+      }
+      return this;
+    };
 
-  this.stop = function() {
-    if ( playing ) {
-      player.stop();
-      playing = false;
-    }
-  };
+    exports.stop = function stop() {
+      if ( playing ) {
+        player.load();
+        playing = false;
+      }
+      return this;
+    };
 
-  this.setTrack = function() {
-    currentTrack = playlist.[this.indexTrack];
-    player.src = currentTrack.src;
-  };
+    exports.prev = function prev() {
+      indexTrack --;
+      if (this.indexTrack < 0) this.indexTrack = 0;
 
-  this.prev = function() {
-    indexTrack --;
+      module.setTrack();
+      exports.play();
+      return this;
+    };
 
-    if (this.indexTrack < 0) this.indexTrack = 0;
+    exports.next = function next() {
+      indexTrack ++;
+      if (this.indexTrack > playlist.length) this.indexTrack = 0;
 
-    this.setTrack();
-    this.play();
-  };
+      module.setTrack();
+      exports.play();
+      return this;
+    };
 
-  this.next = function() {
-    indexTrack ++;
+    return exports;
+  })();
 
-    if (this.indexTrack > playlist.length) this.indexTrack = 0;
-
-    this.setTrack();
-    this.play();
-  };
-
-};
+  window.K7 = K7;
+})(window, document);
